@@ -31,8 +31,16 @@ const onShowHangs = function(event) {
     .catch(ui.showHangsFailure)
 }
 
+// -------- Show Upcoming Hangs function -----------
+const onShowUpcomingHangs = function (event) {
+ event.preventDefault()
+ // console.log('In events.js: onShowUpcoming function has been called and ran')
+ api.showHangs()
+   .then(ui.showUpcomingHangsSuccess)
+   .catch(ui.showUpcomingHangsFailure)
+}
 
-// -------- Show My Hangs function -----------
+ // -------- Show My Hangs function -----------
 const onShowMyHangs = function (event) {
   event.preventDefault()
   // console.log('In events.js: onShowDays function has been called and ran')
@@ -121,6 +129,7 @@ module.exports = {
   onDeleteHang,
   onUpdateHang,
   onShowMyHangs,
+  onShowUpcomingHangs,
   onRsvp,
   onShowRsvp
 }

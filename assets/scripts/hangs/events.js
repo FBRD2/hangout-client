@@ -7,14 +7,14 @@ const store = require('../store')
 
 
 // -------- Creating a Hang function -----------
-const onNewHang = function (event) {
+const onNewHang = function(event) {
   event.preventDefault()
   // console.log('on add movie')
   const data = getFormFields(event.target)
   api.newHang(data)
     .then(ui.onNewHangSuccess)
 
-    .then(function () {
+    .then(function() {
       onShowHangs(event)
     })
     .catch(ui.onNewHangFailure)
@@ -22,8 +22,8 @@ const onNewHang = function (event) {
 
 
 
- // -------- Show All Hangs function -----------
-const onShowHangs = function (event) {
+// -------- Show All Hangs function -----------
+const onShowHangs = function(event) {
   event.preventDefault()
   // console.log('In events.js: onShowDays function has been called and ran')
   api.showHangs()
@@ -32,8 +32,7 @@ const onShowHangs = function (event) {
 }
 
 
-
- // -------- Show My Hangs function -----------
+// -------- Show My Hangs function -----------
 const onShowMyHangs = function (event) {
   event.preventDefault()
   // console.log('In events.js: onShowDays function has been called and ran')
@@ -42,15 +41,13 @@ const onShowMyHangs = function (event) {
     .catch(ui.onShowMyHangsFailure)
 }
 
-
-
- // -------- Delete a Hang function -----------
+// -------- Delete a Hang function -----------
 const onDeleteHang = function (event) {
   // console.log(event.target)
   const id = $(event.target).data('id')
   // console.log("WHO CARES!", id)
   api.deleteHang(id)
-    .then(function () {
+    .then(function() {
       onShowMyHangs(event)
     })
     .catch(ui.onDeleteHangfailure)
@@ -58,24 +55,24 @@ const onDeleteHang = function (event) {
 
 
 
- // -------- Update a Hang function -----------
-const onUpdateHang = function (event) {
+// -------- Update a Hang function -----------
+const onUpdateHang = function(event) {
   event.preventDefault()
   // const data = store.day
   const id = $(event.target).data('id')
   const data = getFormFields(event.target)
   api.updateHang(data, id)
-    .then(function () {
-      onShowHangs(event)
-    },
-    ui.updateHangSuccess)
+    .then(function() {
+        onShowHangs(event)
+      },
+      ui.updateHangSuccess)
     .catch(ui.updateHangFailure)
 }
 
 
 
- // -------- RSVP to a Hang function -----------
-const onRsvp = function (event) {
+// -------- RSVP to a Hang function -----------
+const onRsvp = function(event) {
   event.preventDefault()
   // console.log('store.user.email', store.user)
   if (store.user === undefined) {
@@ -92,7 +89,7 @@ const onRsvp = function (event) {
 
 
 //------- SHOW RSVP  ----
-const onShowRsvp = function (event) {
+const onShowRsvp = function(event) {
   event.preventDefault()
   // console.log('In events.js: onShowDays function has been called and ran')
   api.showMyHangs()
@@ -104,7 +101,7 @@ const onShowRsvp = function (event) {
 
 
 
- // -------- Handlebar Buttons -----------
+// -------- Handlebar Buttons -----------
 const addHandlers = () => {
   $('#show-hangs').on('submit', onShowHangs)
   // $('#clearHangsButton').on('click', onClearMovies)

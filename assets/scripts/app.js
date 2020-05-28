@@ -48,6 +48,8 @@ $(() => {
   $('#rsvp-hangs').hide()
   // $('#rsvp').hide()
 
+  // Home screen text
+  $('#home').show()
 
   hangEvents.addHandlers()
 })

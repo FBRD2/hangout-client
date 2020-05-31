@@ -44,16 +44,15 @@ header {
 }
 
 .three-buttons {
-  padding-top: 6px;
+  padding-top: 7px;
   justify-content: center;
   display:inline-block;
   margin: 15px;
-  max-width: 600px;
-  min-height: 55px;
-  border: solid;
-  border-color: $nav-color;
+  min-width: 700px;
+  min-height: 60px;
+  border: 3px solid $nav-color;
   border-radius: 5px;
-  background-color: $nav-color;
+  background-color: $header-color;
 }
 
 #home {
@@ -79,15 +78,28 @@ header {
 
 .hang_section {
   max-width:100%;
-    max-height:800px;
-   margin:2rem auto;
-   border:2px solid $button-colors;
-   padding:2rem;
-   border-radius:5px;
-      @include make-row;
-  text-align: left;
+  max-height:800px;
+  margin:2rem auto;
+  border:10px solid $button-colors;
+  padding:2rem;
+  border-radius:5px;
+  @include make-row;
+  text-align: center;
   font-weight: bold;
+  background-color: $home;
   left: 10%;
+}
+
+.hang-content {
+  justify-content: center;
+}
+
+.title, .date {
+  justify-content: center;
+}
+
+.title {
+  font-size: 25px;
 }
 
 //  ------- Button stuff ---

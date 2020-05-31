@@ -50,6 +50,8 @@ $(() => {
 
   // Home screen text
   $('#home').show()
+  $('.three-buttons').hide()
+
 
   hangEvents.addHandlers()
 })

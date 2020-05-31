@@ -1,9 +1,12 @@
 @import '~bootstrap/scss/bootstrap';
 
-$button-colors: #357A74;
+$button-colors: rgba(144, 148, 182, 1);
 $blanco: #fff;
-$backgrounds: #FAF0D3;
+$backgrounds: rgba(204, 204, 204, 1);
 $font-hang: 'Quattrocento', serif;
+$nav-color: rgb(136, 80, 83);
+$header-color: rgba(213, 87, 59, .8);
+$home: rgb(198, 236, 196);
 
 body {
   text-align: center;
@@ -11,19 +14,55 @@ body {
   font-family: $font-hang;
 }
 
+header {
+  padding: 15px;
+  background-color: $header-color;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: $home;
+}
+
 .hang_title {
   text-align: center;
+  font-size: 45px;
+  color: $blanco;
 }
 
 #message {
-    font-size: 28px;
-    color: $button-colors;
+    font-size: 20px;
+    color: $home;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
   }
 
+.addHang {
+  margin-top: 25px;
+}
+
+.bg-color {
+  background-color: $nav-color;
+}
+
+.three-buttons {
+  padding-top: 6px;
+  justify-content: center;
+  display:inline-block;
+  margin: 15px;
+  max-width: 600px;
+  min-height: 55px;
+  border: solid;
+  border-color: $nav-color;
+  border-radius: 5px;
+  background-color: $nav-color;
+}
+
 #home {
-  margin: 11.5px auto;
+  margin: 20px auto;
   width: 50%;
   text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: $home;
 }
 
 //  -------- Hang content styling ----
@@ -52,13 +91,13 @@ body {
 }
 
 //  ------- Button stuff ---
-.btn-hang {
-  background-color: $button-colors;
-}
+// .btn-hang {
+//   background-color: $button-colors;
+// }
 
-.btn-hang:hover {
-  color: $blanco;
-}
+// .btn-hang:hover {
+//   color: $blanco;
+// }
 
 .btn-sign-out {
   background-color: $button-colors;
@@ -77,6 +116,15 @@ body {
 
 .btn-sign {
     background-color: $button-colors;
+    color: $blanco;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.btn-upcoming {
+  background-color: $button-colors;
+  color: $blanco;
+  margin: 10px auto;
 }
 
 .btn-sign:hover {

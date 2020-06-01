@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>EventLite!</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>EventLite!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@700&display=swap');
-    </style>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-    <body>
-      <header>
-        <h1 class ="hang_title">EventLite</h1>
-      </header>
-      <!-- MAILMAN MESSAGE CENTER -->
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@700&display=swap');
+</style>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-color align-items-center">
+<body>
+  <header>
+    <h1 class="hang_title">EventLite</h1>
+  </header>
+  <!-- MAILMAN MESSAGE CENTER -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-color align-items-center">
     <div class="dropdown sign-up">
       <button class="btn btn-sign dropdown-toggle btn-margin" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Sign up
@@ -82,38 +83,37 @@
       </form>
     </div>
     <p id="message" class="mailman"></p>
-    </nav>
-    <div class="three-buttons">
-      <button id="show-hangs" type="button" class="btn btn-sign">Show All Events</button>
-      <button id="show-my-hangs" type="button" class="btn btn-sign">Show My Events</button>
-      <button id="rsvp-hangs" type="button" class="btn btn-sign rsvp-show">RSVP'd Events</button>
-    </div>
+  </nav>
+  <div class="three-buttons">
+    <button id="show-hangs" type="button" class="btn btn-sign">Show All Events</button>
+    <button id="show-my-hangs" type="button" class="btn btn-sign">Show My Events</button>
+    <button id="rsvp-hangs" type="button" class="btn btn-sign rsvp-show">RSVP'd Events</button>
+  </div>
+  <button id="show-upcoming-hangs" type="button" class="btn btn-upcoming">Show Upcoming Events</button>
+  <!-- FORM TO ADD HANG -->
+  <div class="hang-form">
+    <form id="addHang" class="addHang">
+      <fieldset>
+        <legend> Add Event </legend>
+        <input type="text" name="hang[title]" placeholder="Hang Name">
+        <input type="date" name="hang[date]" placeholder="Hang Date">
+        <input type="text" name="hang[time]" placeholder="Hang Time">
+        <input type="text" name="hang[location]" placeholder="Location">
+        <input type="text" name="hang[description]" placeholder="Description">
+        <input type="submit" class="btn btn-hang btn-sign" value="Add Event!">
+      </fieldset>
+    </form>
+  </div>
+  <div class="home">
+    <p id="home">Hello and welcome to EventLite!<br>Click <em>"Show Upcoming Hangs"</em> to view all created events.<br><br>Sign in to create events of your own.<br>From there, you can create, update, organize, delete, and RSVP to events created by
+      your friends!</p>
+  </div>
+  <main>
 
-      <!-- FORM TO ADD HANG -->
-      <form id="addHang" class="addHang">
-        <fieldset>
-          <legend> Add Event </legend>
-          <input type="text" name="hang[title]" placeholder="Hang Name">
-          <input type="date" name="hang[date]" placeholder="Hang Date">
-          <input type="text" name="hang[time]" placeholder="Hang Time">
-          <input type="text" name="hang[location]" placeholder="Location">
-          <input type="text" name="hang[description]" placeholder="Description">
-          <input type="submit" class="btn btn-hang btn-sign" value="Add Event!">
-        </fieldset>
+    <!-- For Handlebars Template call -->
+    <div id="content" class="content"></div>
+  </main>
 
-        <!-- <button id="addHangButton" class="btn-gradient green normal"> Add Hang
-        </button> -->
-      </form>
-      <button id="show-upcoming-hangs" type="button" class="btn btn-upcoming">Show Upcoming Events</button>
+</body>
 
-      <div class="home">
-        <p id="home">Hello and welcome to EventLite!<br>Click <em>"Show Upcoming Hangs"</em> to view all created events.<br><br>Sign in to create events of your own.<br>From there, you can create, update, organize, delete, and RSVP to events created by your friends!</p>
-      </div>
-      <main>
-
-          <!-- For Handlebars Template call -->
-        <div id="content" class="content"></div>
-      </main>
-
-    </body>
 </html>

@@ -30,8 +30,7 @@ $(() => {
   $('#delete-hang').hide()
   $('#addHang').hide()
   $('#show-hangs').hide()
-
-
+  $('.hang-form').hide()
 
   // for showing "my hangs"
   $('#show-my-hangs').on('click', hangEvents.onShowMyHangs)

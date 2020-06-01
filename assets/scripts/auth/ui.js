@@ -39,6 +39,7 @@ const onSignInSucess = function (data) {
   $('#rsvp-hangs').show()
   $('#home').hide(800)
   $('.three-buttons').show()
+  $('.hang-form').show()
   $('#show-hangs').show()
   $('#show-upcoming-hangs').hide()
 }

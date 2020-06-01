@@ -17,8 +17,8 @@ body {
 header {
   padding: 15px;
   background-color: $header-color;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: $home;
+  // -webkit-text-stroke-width: 2px;
+  // -webkit-text-stroke-color: $home;
 }
 
 .hang_title {
@@ -48,11 +48,19 @@ header {
   justify-content: center;
   display:inline-block;
   margin: 15px;
-  min-width: 700px;
+  min-width: 650px;
   min-height: 60px;
   border: 3px solid $nav-color;
   border-radius: 5px;
   background-color: $header-color;
+}
+
+.hang-form {
+  background-color: $blanco;
+  border: 5px solid $nav-color;
+  padding: 0 10px 30px 10px;
+  margin: 0 150px;
+  border-radius: 5px;
 }
 
 #home {
@@ -86,7 +94,8 @@ header {
   @include make-row;
   text-align: center;
   font-weight: bold;
-  background-color: $home;
+  background-color: $blanco;
+  color: $nav-color;
   left: 10%;
 }
 
@@ -141,4 +150,8 @@ header {
 
 .btn-sign:hover {
   color: $blanco;
+}
+
+.form-background {
+  background-color: $header-color;
 }

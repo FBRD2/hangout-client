@@ -49,6 +49,7 @@ $(() => {
 
   // Home screen text
   $('#home').show()
+  $('#home-two').hide()
   $('.three-buttons').hide()
 
 

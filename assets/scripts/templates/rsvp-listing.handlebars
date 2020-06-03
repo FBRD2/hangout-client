@@ -1,42 +1,11 @@
 {{#each hangs as |hang|}}
 {{#if hang.isGoing}}
   <section class="hang_section" data-id="{{hang._id}}">
-
-<h6>Title:</h6>
-<h3>
-  {{hang.title}}
-</h3>
-
-<hr>
-
-<h6>Date:</h6>
-<h3>
-  {{hang.date}}
-</h3>
-
-<hr>
-
-<h6>Time:</h6>
-<h3>
-  {{hang.time}}
-</h3>
-
-<hr>
-
-<h6>Location:</h6>
-<h3>
-  {{hang.location}}
-</h3>
-
-<hr>
-
-<h6>Description:</h6>
-<h3>
-  {{hang.description}}
-</h3>
-
-<hr>
-
+    <div class="hang-content">
+        <p class="title">Title:  {{hang.title}}</p>
+        <p class="date"> Date:  {{hang.date}}   Time:  {{hang.time}}   Location:  {{hang.location}}</p>
+        <p class="date">Description:   {{hang.description}}</p>
+    </div>
   </section>
   {{/if}}
 {{/each}}

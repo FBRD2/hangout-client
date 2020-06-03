@@ -46,6 +46,8 @@ const showUpcomingHangsSuccess = function (data) {
   $('#message').text('VIEWING ALL HANGS!')
   $('#message').hide(2200)
   $('.content').show()
+  $('#home').hide()
+  $('#home-two').show()
   if (data.hangs.length === 0) {
     // console.log('no events yet')
   } else {

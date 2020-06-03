@@ -40,7 +40,7 @@ const onSignInSucess = function (data) {
   $('#home').hide(800)
   $('#home-two').hide()
   $('.three-buttons').show()
-  $('.hang-form').show()
+  $('.hang-form').hide()
   $('#show-hangs').show()
   $('#show-upcoming-hangs').hide()
 }
@@ -91,6 +91,7 @@ const onSignOutSuccess = function (data) {
   $('#home').show()
   $('#sign-out').hide()
   $('#show-hangs').hide()
+  $('.hang-form').hide()
   $('#show-upcoming-hangs').show()
 }
 

@@ -86,22 +86,24 @@
   </nav>
 
   <div class="three-buttons">
+    <button id="create-hang-form" type="button" class="btn btn-sign">Create New Event</button>
     <button id="show-hangs" type="button" class="btn btn-sign">Show All Events</button>
     <button id="show-my-hangs" type="button" class="btn btn-sign">Show My Events</button>
     <button id="rsvp-hangs" type="button" class="btn btn-sign rsvp-show">RSVP'd Events</button>
   </div>
   <button id="show-upcoming-hangs" type="button" class="btn btn-upcoming">Show Upcoming Events</button>
-  
+
   <div class="hang-form">
     <form id="addHang" class="addHang">
       <fieldset>
         <legend> Add Event </legend>
-        <input type="text" name="hang[title]" placeholder="Hang Name">
-        <input type="date" name="hang[date]" placeholder="Hang Date">
-        <input type="text" name="hang[time]" placeholder="Hang Time">
-        <input type="text" name="hang[location]" placeholder="Location">
-        <input type="text" name="hang[description]" placeholder="Description">
+        <input type="text" name="hang[title]" placeholder="Event Name">
+        <input type="date" name="hang[date]" placeholder="Event Date">
+        <input type="text" name="hang[time]" placeholder="Event Time">
+        <input type="text" name="hang[location]" placeholder="Event Location">
+        <input type="text" name="hang[description]" placeholder="Event Description">
         <input type="submit" class="btn btn-hang btn-sign" value="Add Event!">
+        <button class="btn btn-danger hide-form">Hide</button>
       </fieldset>
     </form>
   </div>

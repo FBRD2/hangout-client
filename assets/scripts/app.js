@@ -32,6 +32,15 @@ $(() => {
   $('#show-hangs').hide()
   $('.hang-form').hide()
 
+  // Edit Event Toggle
+  $('#edit-show').on('click', hangEvents.editFormShow)
+  $('.update').hide()
+  // $('.hide-form').on('click', hangEvents.hideNewHangForm)
+
+  // Create New Event Toggle
+  $('#create-hang-form').on('click', hangEvents.addNewHangForm)
+  $('.hide-form').on('click', hangEvents.hideNewHangForm)
+
   // for showing "my hangs"
   $('#show-my-hangs').on('click', hangEvents.onShowMyHangs)
   $('#show-my-hangs').hide()
@@ -51,7 +60,6 @@ $(() => {
   $('#home').show()
   $('#home-two').hide()
   $('.three-buttons').hide()
-
 
   hangEvents.addHandlers()
 })

@@ -6,6 +6,54 @@ const showMyHangsTemplate = require('../templates/my-hang-listing.handlebars')
 const rsvpTemplate = require('../templates/rsvp-listing.handlebars')
 const showUpcomingHangs = require('../templates/upcoming-hangs-listing.handlebars')
 
+// ---------- Create New Event Toggle -------------
+const onAddNewHangFormSuccess = function (event) {
+  $('.hang-form').show()
+  $('#message').show(2200)
+  $('#message').text('Create a new event!')
+  $('#message').hide(2200)
+}
+
+const onAddNewHangFormFailure = function (event) {
+  $('.hang-form').show()
+  $('#message').show(2200)
+  $('#message').text('Failure to load new event form!')
+  $('#message').hide(2200)
+}
+
+const onHideNewHangFormSuccess = function (event) {
+  $('.hang-form').hide()
+  $('#message').show(2200)
+  $('#message').text('!')
+  $('#message').hide(2200)
+}
+
+const onHideNewHangFormFailure = function (event) {
+  $('.hang-form').hide()
+  $('#message').show(2200)
+  $('#message').text('Failure to remove form!')
+  $('#message').hide(2200)
+}
+
+// ---------- Edit Event Toggle -------------
+const onEditFormShowSuccess = function (event) {
+  $('.update').show()
+  console.log('succes on edit')
+  console.log(error)
+  $('#message').show(2200)
+  $('#message').text('Failure to remove form!')
+  $('#message').hide(2200)
+}
+
+const onEditFormShowFailure = function (event) {
+  $('.update').show()
+  console.log('failure to show edit')
+  console.log(error)
+  $('#message').show(2200)
+  $('#message').text('Failure to remove form!')
+  $('#message').hide(2200)
+}
+
 // ---------- Creating a New Hang -------------
 const onNewHangSuccess = function (data) {
   $('#message').show(2200)
@@ -159,6 +207,12 @@ const rsvpHangFailure = function (data) {
 }
 
 module.exports = {
+  onAddNewHangFormSuccess,
+  onAddNewHangFormFailure,
+  onHideNewHangFormSuccess,
+  onHideNewHangFormFailure,
+  onEditFormShowSuccess,
+  onEditFormShowFailure,
   showHangsSuccess,
   showHangsFailure,
   onNewHangSuccess,

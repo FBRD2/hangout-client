@@ -7,16 +7,17 @@
         <p class="date">Description:   {{hang.description}}</p>
         <button data-id="{{hang._id}}" class="btn btn-danger">Delete</button>
         <button data-id="{{hang._id}}" class="btn btn-rsvp btn-sign">RSVP</button>
+        <button id="edit-show" class="btn btn-sign">Edit</button>
     </div>
     <div class="update">
-      <form id="updateButton" class="" data-id="{{hang._id}}">
+      <form id="updateButton" data-id="{{hang._id}}">
         <h5>Update Event</h5>
         <fieldset>
           <input type="text" name="hang[title]" value="{{hang.title}}" placeholder="Title">
-          <input type="date" name="hang[date]" value="{{hang.date}}">
-          <input type="text" name="hang[time]" value="{{hang.time}}" placeholder="4:00 PM">
-          <input type="text" name="hang[location]" value="{{hang.location}}" placeholder="Boston, MA">
-          <input type="text" name="hang[description]" value="{{hang.description}}" placeholder="What is happening at this event">
+          <input type="date" name="hang[date]" value="{{hang.date}}" placeholder="Date">
+          <input type="text" name="hang[time]" value="{{hang.time}}" placeholder="Time">
+          <input type="text" name="hang[location]" value="{{hang.location}}" placeholder="Location">
+          <input type="text" name="hang[description]" value="{{hang.description}}" placeholder="Description of Event">
           <button type="submit" class="btn btn-sign" value="Edit Event">Edit</button>
         </fieldset>
       </form>

@@ -20,7 +20,26 @@ const onNewHang = function(event) {
     .catch(ui.onNewHangFailure)
 }
 
+// -------- Event Form Toggling -----------
+const addNewHangForm = function (event) {
+  event.preventDefault()
+  ui.onAddNewHangFormSuccess(event)
+  ui.onAddNewHangFormFailure(event)
+}
 
+const hideNewHangForm = function (event) {
+  event.preventDefault()
+  ui.onHideNewHangFormSuccess(event)
+  ui.onHideNewHangFormFailure(event)
+}
+
+// -------- Edit Form Toggling -----------
+const editFormShow = function (event) {
+  event.preventDefault()
+  console.log('event edit toggle')
+  ui.onEditFormShowSuccess(event)
+  ui.onEditFormShowFailure(event)
+}
 
 // -------- Show All Hangs function -----------
 const onShowHangs = function(event) {
@@ -131,5 +150,8 @@ module.exports = {
   onShowMyHangs,
   onShowUpcomingHangs,
   onRsvp,
+  addNewHangForm,
+  hideNewHangForm,
+  editFormShow,
   onShowRsvp
 }

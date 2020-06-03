@@ -16,9 +16,9 @@ const onAddNewHangFormSuccess = function (event) {
 
 const onAddNewHangFormFailure = function (event) {
   $('.hang-form').show()
-  $('#message').show(2200)
-  $('#message').text('Failure to load new event form!')
-  $('#message').hide(2200)
+  // $('#message').show(2200)
+  // $('#message').text('Failure to load new event form!')
+  // $('#message').hide(2200)
 }
 
 const onHideNewHangFormSuccess = function (event) {
@@ -30,9 +30,9 @@ const onHideNewHangFormSuccess = function (event) {
 
 const onHideNewHangFormFailure = function (event) {
   $('.hang-form').hide()
-  $('#message').show(2200)
-  $('#message').text('Failure to remove form!')
-  $('#message').hide(2200)
+  // $('#message').show(2200)
+  // $('#message').text('Failure to remove form!')
+  // $('#message').hide(2200)
 }
 
 // ---------- Edit Event Toggle -------------
@@ -79,6 +79,7 @@ const showHangsSuccess = function (data) {
   $('#message').text('VIEWING ALL HANGS!')
   $('#message').hide(2200)
   $('.content').show()
+  $('.update').hide()
   if (data.hangs.length === 0) {
     // console.log('no events yet')
   } else {

@@ -31,6 +31,7 @@ const hideNewHangForm = function (event) {
   event.preventDefault()
   ui.onHideNewHangFormSuccess(event)
   ui.onHideNewHangFormFailure(event)
+    ui.onEditFormShowFailure(event)
 }
 
 // -------- Edit Form Toggling -----------
@@ -38,7 +39,6 @@ const editFormShow = function (event) {
   event.preventDefault()
   console.log('event edit toggle')
   ui.onEditFormShowSuccess(event)
-  ui.onEditFormShowFailure(event)
 }
 
 // -------- Show All Hangs function -----------
@@ -135,11 +135,11 @@ const addHandlers = () => {
   $('.content').on('click', '.btn-danger', onDeleteHang)
   $('.content').on('click', '.btn-rsvp', onRsvp)
   $('.content').on('submit', '#updateButton', onUpdateHang)
+  $('.update').on('click', '.edit-show', editFormShow)
+  $('.update').hide()
   // $('.content').on('submit', '#rsvp-hangs', onUpdateHang)
   // $('#rsvp-hangs').hide()
-
 }
-
 
 module.exports = {
   onShowHangs,

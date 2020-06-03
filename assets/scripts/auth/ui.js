@@ -26,7 +26,7 @@ const onSignInSucess = function (data) {
   // console.log('onSignInSucess data is: ', data)
   $('#message').show()
   $('#message').text('SIGNED IN!')
-
+  $('.content').hide()
   $('#sign-in').closest('form').find('input[type=text], textarea').val('')
   $('#sign-in').closest('form').find('input[type=password], textarea').val('')
   store.user = data.user
@@ -93,6 +93,7 @@ const onSignOutSuccess = function (data) {
   $('#show-hangs').hide()
   $('.hang-form').hide()
   $('#show-upcoming-hangs').show()
+  $('.three-buttons').hide()
 }
 
 const onSignOutFailure = function () {

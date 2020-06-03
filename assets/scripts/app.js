@@ -32,11 +32,6 @@ $(() => {
   $('#show-hangs').hide()
   $('.hang-form').hide()
 
-  // Edit Event Toggle
-  $('#edit-show').on('click', hangEvents.editFormShow)
-  $('.update').hide()
-  // $('.hide-form').on('click', hangEvents.hideNewHangForm)
-
   // Create New Event Toggle
   $('#create-hang-form').on('click', hangEvents.addNewHangForm)
   $('.hide-form').on('click', hangEvents.hideNewHangForm)

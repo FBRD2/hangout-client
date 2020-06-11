@@ -93,9 +93,9 @@ const onSignOutSuccess = function (data) {
 
 const onSignOutFailure = function () {
   // console.log('onSignOutFailure data is: ')
-  $('#message').show(800)
+  $('#message').show()
   $('#message').text('Sign Out Error!')
-  $('#message').hide(800)
+  $('#message').fadeOut(1800)
   $('#sign-out').closest('form').find('input[type=text], textarea').val('')
   $('#sign-out').closest('form').find('input[type=password], textarea').val('')
 }

@@ -5,17 +5,17 @@ const store = require('../store')
 // -------- Sign Up  -----------
 const onSignUpSucess = function (data) {
   // console.log('onSignUpSucess data is: ', data)
-  $('#message').show(800)
+  $('#message').show()
   $('#message').text('SIGNED UP!')
-  $('#message').hide(800)
+  $('#message').fadeOut(1800)
   $('#sign-up').closest('form').find('input[type=text], textarea').val('')
   $('#sign-up').closest('form').find('input[type=password], textarea').val('')
 }
 
 const onSignUpFailure = function () {
-  $('#message').show(800)
+  $('#message').show()
   $('#message').text('Sign Up Error!')
-  $('#message').hide(800)
+  $('#message').fadeOut(1800)
   // console.log('onSignUpFailure data is: ')
   $('#sign-up').closest('form').find('input[type=text], textarea').val('')
   $('#sign-up').closest('form').find('input[type=password], textarea').val('')
@@ -24,7 +24,7 @@ const onSignUpFailure = function () {
 // -------- Sign In -----------
 const onSignInSucess = function (data) {
   // console.log('onSignInSucess data is: ', data)
-  $('#message').fadeIn(800)
+  $('#message').show()
   $('#message').text('SIGNED IN!')
   $('#message').fadeOut(800)
   $('#sign-in').closest('form').find('input[type=text], textarea').val('')
@@ -37,15 +37,15 @@ const onSignInSucess = function (data) {
   $('#show-my-hangs').show()
   $('#addHang').show()
   $('#rsvp-hangs').show()
-  $('#home').hide(800)
+  $('#home').hide(1800)
   $('#show-hangs').show()
   $('#show-upcoming-hangs').hide()
 }
 
 const onSignInFailure = function () {
-  $('#message').show(800)
+  $('#message').show()
   $('#message').text('Sign In Error!')
-  $('#message').hide(800)
+  $('#message').fadeOut(1800)
   // console.log('onSignInFailure data is: ')
   $('#sign-in').closest('form').find('input[type=text], textarea').val('')
   $('#sign-in').closest('form').find('input[type=password], textarea').val('')
@@ -53,9 +53,9 @@ const onSignInFailure = function () {
 
 // -------- Change Password -----------
 const onChangePasswordSuccess = function (data) {
-  $('#message').show(800)
+  $('#message').show()
   $('#message').text('PASSWORD CHANGED!')
-  $('#message').hide(800)
+  $('#message').fadeOut(1800)
   // console.log('onChangePasswordSuccess data is: ', data)
   $('#change-password2').trigger('reset')
   // $('#change-password').closest('form').find('input[type=password], textarea').val('')
@@ -63,9 +63,9 @@ const onChangePasswordSuccess = function (data) {
 }
 
 const onChangePasswordFailure = function () {
-  $('#message').show(800)
+  $('#message').show()
   $('#message').text('Password Change Error!')
-  $('#message').show(800)
+  $('#message').fadeOut(1800)
   // console.log('onChangePasswordFailure data is: ')
   $('#change-password2').trigger('reset')
   // $('#change-password').closest('form').find('input[type=password], textarea').val('')
@@ -75,9 +75,9 @@ const onChangePasswordFailure = function () {
 // -------- Sign Out -----------
 const onSignOutSuccess = function (data) {
   // console.log('onSignOutSuccess data is: ', data)
-  $('#message').show(3300)
+  $('#message').show()
   $('#message').text('SIGNED OUT!')
-  $('#message').hide(3300)
+  $('#message').fadeOut(1800)
   $('.sign-up').show()
   $('.sign-in').show()
   $('#change-password').hide()

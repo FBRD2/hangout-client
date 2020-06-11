@@ -37,7 +37,7 @@ const onSignInSucess = function (data) {
   $('#show-my-hangs').show()
   $('#addHang').show()
   $('#rsvp-hangs').show()
-  $('#home').hide(800)
+  $('#home').fadeOut(800)
   $('#home-two').hide()
   $('.three-buttons').show()
   $('.hang-form').hide()
@@ -46,7 +46,7 @@ const onSignInSucess = function (data) {
 }
 
 const onSignInFailure = function () {
-  $('#message').show(1400)
+  $('#message').show()
   $('#message').text('Sign In Error!')
 
   // console.log('onSignInFailure data is: ')
@@ -56,9 +56,8 @@ const onSignInFailure = function () {
 
 // -------- Change Password -----------
 const onChangePasswordSuccess = function (data) {
-  $('#message').show(1400)
+  $('#message').show()
   $('#message').text('PASSWORD CHANGED!')
-  $('#message').hide(800)
   // console.log('onChangePasswordSuccess data is: ', data)
   $('#change-password2').trigger('reset')
   // $('#change-password').closest('form').find('input[type=password], textarea').val('')
@@ -66,9 +65,8 @@ const onChangePasswordSuccess = function (data) {
 }
 
 const onChangePasswordFailure = function () {
-  $('#message').show(1400)
+  $('#message').show()
   $('#message').text('Password Change Error!')
-  $('#message').show(800)
   // console.log('onChangePasswordFailure data is: ')
   $('#change-password2').trigger('reset')
   // $('#change-password').closest('form').find('input[type=password], textarea').val('')
@@ -78,9 +76,8 @@ const onChangePasswordFailure = function () {
 // -------- Sign Out -----------
 const onSignOutSuccess = function (data) {
   // console.log('onSignOutSuccess data is: ', data)
-  $('#message').show(1400)
+  $('#message').show()
   $('#message').text('SIGNED OUT!')
-  $('#message').hide(800)
   $('.sign-up').show()
   $('.sign-in').show()
   $('#change-password').hide()

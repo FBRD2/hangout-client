@@ -55,6 +55,7 @@ $(() => {
   $('#home').show()
   $('#home-two').hide()
   $('.three-buttons').hide()
+  $('.update').hide()
 
   hangEvents.addHandlers()
 })

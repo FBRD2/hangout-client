@@ -135,8 +135,7 @@ const addHandlers = () => {
   $('.content').on('click', '.btn-danger', onDeleteHang)
   $('.content').on('click', '.btn-rsvp', onRsvp)
   $('.content').on('submit', '#updateButton', onUpdateHang)
-  $('.update').on('click', '.edit-show', editFormShow)
-  $('.update').hide()
+  $('.content').on('click', '.edit-show', editFormShow)
   // $('.content').on('submit', '#rsvp-hangs', onUpdateHang)
   // $('#rsvp-hangs').hide()
 }

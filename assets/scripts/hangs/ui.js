@@ -9,9 +9,9 @@ const showUpcomingHangs = require('../templates/upcoming-hangs-listing.handlebar
 // ---------- Create New Event Toggle -------------
 const onAddNewHangFormSuccess = function (event) {
   $('.hang-form').show()
-  $('#message').show(2200)
+  $('#message').show()
   $('#message').text('Create a new event!')
-  $('#message').hide(2200)
+  $('#message').fadeOut(1500)
 }
 
 const onAddNewHangFormFailure = function (event) {
@@ -23,9 +23,6 @@ const onAddNewHangFormFailure = function (event) {
 
 const onHideNewHangFormSuccess = function (event) {
   $('.hang-form').hide()
-  $('#message').show(2200)
-  $('#message').text('!')
-  $('#message').hide(2200)
 }
 
 const onHideNewHangFormFailure = function (event) {
@@ -36,37 +33,37 @@ const onHideNewHangFormFailure = function (event) {
 }
 
 // ---------- Edit Event Toggle -------------
-const onEditFormShowSuccess = function (event) {
-  $('.update').show()
-  console.log('succes on edit')
-  console.log(error)
-  $('#message').show(2200)
-  $('#message').text('Failure to remove form!')
-  $('#message').hide(2200)
-}
-
-const onEditFormShowFailure = function (event) {
-  $('.update').show()
-  console.log('failure to show edit')
-  console.log(error)
-  $('#message').show(2200)
-  $('#message').text('Failure to remove form!')
-  $('#message').hide(2200)
-}
+// const onEditFormShowSuccess = function (event) {
+//   $('.update').show()
+//   console.log('succes on edit')
+//   console.log(error)
+//   $('#message').show()
+//
+//   $('#message').fadeOut(3000)
+// }
+//
+// const onEditFormShowFailure = function (event) {
+//   $('.update').show()
+//   console.log('failure to show edit')
+//   console.log(error)
+//   $('#message').show()
+//   $('#message').text('Failure to remove form!')
+//   $('#message').fadeOut(3000)
+// }
 
 // ---------- Creating a New Hang -------------
 const onNewHangSuccess = function (data) {
-  $('#message').show(2200)
-  $('#message').text('NEW HANG ADDED!')
-  $('#message').hide(2200)
+  $('#message').show()
+  $('#message').text('New Event Added!')
+  $('#message').fadeOut(1500)
   $('#addHang').closest('form').find('input[type=text], textarea').val('')
   $('#addHang').closest('form').find('input[type=date], textarea').val('')
 }
 
 const onNewHangFailure = function () {
-  $('#message').show(2200)
-  $('#message').text('FAILURE TO ADD NEW HANG!')
-  $('#message').hide(2200)
+  $('#message').show()
+  $('#message').text('FAILURE TO ADD NEW EVENT!')
+  $('#message').fadeOut(1500)
   $('#addHang').closest('form').find('input[type=text], textarea').val('')
   $('#addHang').closest('form').find('input[type=date], textarea').val('')
 }
@@ -75,9 +72,9 @@ const onNewHangFailure = function () {
 const showHangsSuccess = function (data) {
   const showHangsHtml = showHangsTemplate({ hangs: data.hangs })
   $('.content').html(showHangsHtml)
-  $('#message').show(2200)
-  $('#message').text('VIEWING ALL HANGS!')
-  $('#message').hide(2200)
+  $('#message').show()
+  $('#message').text('Viewing All Events!')
+  $('#message').fadeOut(1500)
   $('.content').show()
   $('.update').hide()
   if (data.hangs.length === 0) {
@@ -91,9 +88,9 @@ const showHangsSuccess = function (data) {
 const showUpcomingHangsSuccess = function (data) {
   const showUpcomingsHangsHtml = showUpcomingHangs({ hangs: data.hangs })
   $('.content').html(showUpcomingsHangsHtml)
-  $('#message').show(2200)
-  $('#message').text('VIEWING ALL HANGS!')
-  $('#message').hide(2200)
+  $('#message').show()
+  $('#message').text('Viewing Upcoming Events!')
+  $('#message').fadeOut(1500)
   $('.content').show()
   $('#home').hide()
   $('#home-two').show()
@@ -105,9 +102,9 @@ const showUpcomingHangsSuccess = function (data) {
 }
 
 const showHangsFailure = function (data) {
-  $('#message').show(2200)
+  $('#message').show()
   $('#message').text('THERE WAS AN ERROR!')
-  $('#message').hide(2200)
+  $('#message').fadeOut(1500)
 }
 
 // ---------- Showing My Hangs -------------
@@ -130,13 +127,14 @@ const onShowMyHangsSuccess = function (data) {
   const showMyHangsHtml = showMyHangsTemplate({ hangs: data.hangs })
   $('.content').html(showMyHangsHtml)
   $('.content').show()
-  $('#message').show(2200)
-  $('#message').text('VIEW YOUR HANGS!')
-  $('#message').hide(2200)
+  $('#message').stop()
+  $('#message').show()
+  $('#message').text('Viewing Your Events!')
+  $('#message').fadeOut(1500)
 }
 
 const onShowMyHangsFailure = function (data) {
-  $('#message').show(2200)
+  $('#message').show()
   $('#message').text('Failure to Show Your Hangs')
 }
 
@@ -163,48 +161,51 @@ const onShowRsvp = function (data) {
   const showRsvp = rsvpTemplate({ hangs: data.hangs })
   $('.content').html(showRsvp)
   $('.content').show()
-  $('#message').show(2200)
-  $('#message').text('VIEW YOUR HANGS!')
-  $('#message').hide(2200)
+  $('#message').show()
+  $('#message').text('Viewing RSVP\'D Events!')
+  $('#message').fadeOut(1500)
 }
 
 // ---------- Deleting a Hang -------------
 const onDeleteHangSuccess = function () {
-  $('#message').show(2200)
-  $('#message').text('Your Hang has been Deleted!')
-  $('#message').hide(2200)
+  $('#message').show()
+  $('#message').text('Your Events Has Been Deleted!')
+  $('#message').fadeOut(1500)
 }
 
 const onDeleteHangfailure = function () {
-  $('#message').show(2200)
-  $('#message').text('Failure to Delete Hang')
-  $('#message').hide(2200)
+  $('#message').show()
+  $('#message').text('Failure to Delete Event')
+  $('#message').fadeOut(1500)
 }
 
 // ---------- Updating a Hang -------------
 const onUpdateHangSuccess = function () {
-  $('#message').show(2200)
-  $('#message').text('HANG UPDATED!')
-  $('#message').hide(2200)
+  $('#message').show()
+  $('#message').text('Event Updated!')
+  $('#message').fadeOut(1500)
 }
 
 const onUpdateHangFailure = function () {
-  $('#message').show(2200)
-  $('#message').text('Failure to Update Hang!')
-  $('#message').hide(2000)
+  $('#message').show()
+  $('#message').text('Failure to Update Event!')
+  $('#message').fadeOut(1500)
 }
 
 // ---------- RSVP -------------
 const rsvpHangSuccess = function (data) {
+  $('#message').show()
+  $('#message').text('You RSVP\'D To The Event!')
+  $('#message').fadeOut(1500)
   // console.log('RSVP hang success bb')
 }
 
 const rsvpHangFailure = function (data) {
   // console.log('RSVP hang fail bb')
 
-  $('#message').show(2200)
+  $('#message').show()
   $('#message').text('You must sign in to use RSVP features')
-  $('#message').hide(2000)
+  $('#message').fadeOut(1500)
 }
 
 module.exports = {
@@ -212,8 +213,8 @@ module.exports = {
   onAddNewHangFormFailure,
   onHideNewHangFormSuccess,
   onHideNewHangFormFailure,
-  onEditFormShowSuccess,
-  onEditFormShowFailure,
+  // onEditFormShowSuccess,
+  // onEditFormShowFailure,
   showHangsSuccess,
   showHangsFailure,
   onNewHangSuccess,
